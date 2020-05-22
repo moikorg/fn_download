@@ -4,7 +4,6 @@ from datetime import datetime
 import configparser
 import smtplib
 import ssl
-from email.message import EmailMessage
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
