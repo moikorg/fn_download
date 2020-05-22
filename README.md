@@ -7,7 +7,7 @@ The script gets the credential information from a second shell script exporting 
 
 ## config file
 The config file has the following structure:
-`
+```bash
 [FN-Credentials]
 username = donaldduck
 password = xyz
@@ -15,4 +15,4 @@ password = xyz
 [Nextcloud-Credentials]
 username = donaldduck
 password = xyz
-`
+```
