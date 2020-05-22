@@ -15,4 +15,14 @@ password = xyz
 [Nextcloud-Credentials]
 username = donaldduck
 password = xyz
+
+[SMTP]
+server = <smtp server>
+username = <sender mail account>
+password = your secret....
+port = 587
+
+[RECEPIENT]
+send = 1
+addr = <recepient email address>
 ```
