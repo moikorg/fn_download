@@ -107,7 +107,7 @@ def main():
     # f.write(r.content)
     # f.close()
     
-    if credentials['send_enabled'] == 1:
+    if credentials['send_enabled'] == '1':
         mailMsg = "Hallo, hier die FN von heute. Gruss"
         addr = credentials['recepient']
         sendMail(credentials, addr, mailMsg, r.content)
