@@ -60,7 +60,8 @@ def getConfig():
         'SMTP_port': config['SMTP']['port'],
         'SMTP_user': config['SMTP']['username'],
         'SMTP_pw': config['SMTP']['password'],
-        'recepient': config['RECEPIENT']['addr']
+        'recepient': config['RECEPIENT']['addr'],
+        'send_enabled': config['RECEPIENT']['send'],
     }
     return credentials
 
@@ -105,10 +106,11 @@ def main():
     # f = open('./out.pdf', 'wb')
     # f.write(r.content)
     # f.close()
-
-    mailMsg = "Hallo, hier die FN von heute. Gruss"
-    addr = credentials['recepient']
-    sendMail(credentials, addr, mailMsg, r.content)
+    
+    if credentials['send_enabled'] == 1:
+        mailMsg = "Hallo, hier die FN von heute. Gruss"
+        addr = credentials['recepient']
+        sendMail(credentials, addr, mailMsg, r.content)
 
     # write the document to nextcloud
     try:
